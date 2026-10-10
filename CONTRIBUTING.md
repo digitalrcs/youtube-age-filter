@@ -26,6 +26,6 @@ Load the repository folder as an unpacked extension. After source changes, reloa
 
 The automated suite covers representative DOM fixtures; it cannot guarantee compatibility with every YouTube experiment. Before releasing, check Home, search, a channel's Videos tab, and watch recommendations in a real browser. Verify new and old cards, infinite scrolling, channel exceptions, pause/start, and restoring Shorts.
 
-On Windows, run `npm run package` to produce the install ZIP and checksum in `dist/`. The packaging script includes only extension runtime files, README, license, and privacy policy. Test dependencies are never shipped.
+On Windows, run `npm run package` to produce the install ZIP and checksum in `dist/`. The packaging script includes the extension runtime files, license, and documentation. Test dependencies are never shipped.
 
 Update `manifest.json`, `package.json`, and the lockfile together when changing versions. Add a changelog entry. Publishing a Git tag such as `v1.6.0` runs the release workflow, checks the matching version, and attaches a ZIP and checksum to the GitHub release.
