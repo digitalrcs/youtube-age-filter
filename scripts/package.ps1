@@ -6,7 +6,7 @@ $dist = Join-Path $root 'dist'
 New-Item -ItemType Directory -Path $dist -Force | Out-Null
 $name = "youtube-age-filter-v$($manifest.version).zip"
 $output = Join-Path $dist $name
-$files = @('manifest.json', 'content.js', 'popup.html', 'popup.js', 'README.md', 'LICENSE', 'PRIVACY.md', 'SECURITY.md', 'CONTRIBUTING.md', 'CHANGELOG.md', 'docs')
+$files = @('manifest.json', 'content.js', 'popup.html', 'popup.js', 'README.md', 'LICENSE', 'PRIVACY.md', 'SECURITY.md', 'CONTRIBUTING.md', 'CHANGELOG.md', 'docs', 'icons')
 Compress-Archive -LiteralPath ($files | ForEach-Object { Join-Path $root $_ }) -DestinationPath $output -Force
 $sha = [System.Security.Cryptography.SHA256]::Create()
 $stream = [System.IO.File]::OpenRead($output)

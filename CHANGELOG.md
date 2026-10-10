@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.6.1 - 2026-10-10
+
+- Add the DigitalRCS logo to the extension popup and repository README.
+- Add browser toolbar and extension manager icons at 16, 32, 48, and 128 pixels.
+- Include optimized logo assets in the install archive while retaining the original artwork in the repository.
+
 ## 1.6.0 - 2026-10-10
 
 - First public GitHub release with installation, privacy, troubleshooting, and contribution documentation.

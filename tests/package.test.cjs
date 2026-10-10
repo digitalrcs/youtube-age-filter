@@ -14,4 +14,10 @@ test('manifest uses MV3, minimal permissions, existing entrypoints, and matching
   for (const file of [...manifest.content_scripts.flatMap(s => s.js), manifest.action.default_popup]) {
     assert.ok(fs.existsSync(path.join(root, file)), file);
   }
+  for (const [size, file] of Object.entries(manifest.icons)) {
+    const png = fs.readFileSync(path.join(root, file));
+    assert.equal(png.subarray(1, 4).toString(), 'PNG');
+    assert.equal(png.readUInt32BE(16), Number(size));
+    assert.equal(png.readUInt32BE(20), Number(size));
+  }
 });

@@ -1,5 +1,7 @@
 # YouTube Age Filter
 
+<img src="icons/digitalrcs-logo.png" alt="DigitalRCS" width="480">
+
 [![CI](https://github.com/digitalrcs/youtube-age-filter/actions/workflows/ci.yml/badge.svg)](https://github.com/digitalrcs/youtube-age-filter/actions/workflows/ci.yml)
 [![Release](https://img.shields.io/github/v/release/digitalrcs/youtube-age-filter)](https://github.com/digitalrcs/youtube-age-filter/releases/latest)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
@@ -51,7 +53,7 @@ Download and extract the new release. Replace the runtime files in the **same in
 Each release includes `SHA256SUMS.txt`. Compare its value with your downloaded ZIP:
 
 ```powershell
-Get-FileHash .\youtube-age-filter-v1.6.0.zip -Algorithm SHA256
+Get-FileHash .\youtube-age-filter-v1.6.1.zip -Algorithm SHA256
 ```
 
 On macOS, use `shasum -a 256`; on Linux, use `sha256sum`.
