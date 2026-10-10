@@ -53,7 +53,7 @@ Download and extract the new release. Replace the runtime files in the **same in
 Each release includes `SHA256SUMS.txt`. Compare its value with your downloaded ZIP:
 
 ```powershell
-Get-FileHash .\youtube-age-filter-v1.6.1.zip -Algorithm SHA256
+Get-FileHash .\youtube-age-filter-v1.6.2.zip -Algorithm SHA256
 ```
 
 On macOS, use `shasum -a 256`; on Linux, use `sha256sum`.

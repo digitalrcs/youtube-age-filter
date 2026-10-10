@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.6.2 - 2026-10-10
+
+- Replace the scaled full-logo toolbar icons with a high-contrast copper D monogram.
+- Preserve the full DigitalRCS artwork in the popup and README.
+
 ## 1.6.1 - 2026-10-10
 
 - Add the DigitalRCS logo to the extension popup and repository README.
