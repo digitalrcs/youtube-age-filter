@@ -1,0 +1,28 @@
+{
+  "name": "YouTube Age Filter",
+  "description": "Filter YouTube by video age, hide Shorts, and manage channel exceptions. Pause or resume anytime. Settings stay on your device.",
+  "version": "1.6.0",
+  "homepage_url": "https://github.com/digitalrcs/youtube-age-filter",
+  "manifest_version": 3,
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://www.youtube.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.youtube.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "YouTube Age Filter"
+  }
+}

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>YouTube Age Filter</title>
+    <style>
+      body { font: 13px system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; padding: 12px; min-width: 330px; color: #202124; }
+      label { display: block; margin-bottom: 8px; }
+      .option { display: flex; align-items: center; gap: 8px; }
+      input[type=number] { width: 90px; }
+      button { cursor: pointer; }
+      .actions { display: flex; gap: 8px; margin: 10px 0; }
+      .primary { background: #065fd4; color: white; border: 0; border-radius: 4px; padding: 7px 12px; }
+      .secondary { background: white; border: 1px solid #aaa; border-radius: 4px; padding: 6px 10px; }
+      h2 { font-size: 14px; margin: 14px 0 8px; }
+      .add-row { display: flex; gap: 6px; }
+      #channelInput { flex: 1; min-width: 0; }
+      #whitelist { list-style: none; padding: 0; margin: 8px 0 0; max-height: 150px; overflow: auto; }
+      #whitelist li { display: flex; align-items: center; gap: 8px; padding: 5px 0; border-top: 1px solid #eee; }
+      #whitelist span { flex: 1; overflow-wrap: anywhere; }
+      .delete { border: 0; background: transparent; color: #b3261e; font-size: 16px; padding: 2px 6px; }
+      .hint { color: #555; margin-top: 10px; }
+      #status { min-height: 18px; margin-top: 8px; color: #555; }
+    </style>
+  </head>
+  <body>
+    <label class="option">
+      <input id="enabled" type="checkbox">
+      Filtering active
+    </label>
+    <label>Max age (days):
+      <input id="days" type="number" min="1" step="1">
+    </label>
+    <label class="option">
+      <input id="hideShorts" type="checkbox">
+      Hide YouTube Shorts
+    </label>
+    <label class="option">
+      <input id="debugOverlay" type="checkbox">
+      Show debug overlay
+    </label>
+    <div class="actions">
+      <button id="save" class="primary">Save settings</button>
+      <button id="currentChannel" class="secondary">Add current channel</button>
+    </div>
+    <h2>Whitelisted channels</h2>
+    <div class="add-row">
+      <input id="channelInput" type="text" aria-label="Channel handle, URL, ID, or exact name" placeholder="@handle, channel URL, ID, or name">
+      <button id="addChannel" class="secondary">Add</button>
+    </div>
+    <ul id="whitelist"></ul>
+    <div id="status" aria-live="polite"></div>
+    <div class="hint">Debug overlay shows what the filter detected on each video card.</div>
+    <script src="popup.js"></script>
+  </body>
+</html>

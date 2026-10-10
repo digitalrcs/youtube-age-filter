@@ -1,0 +1,26 @@
+name: Bug report
+description: Report an incorrect filtering decision or extension error.
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Extension and browser versions
+      placeholder: "1.6.0; Brave 1.x / Chrome 1xx; Windows 11"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Include page type, YouTube language, age limit, Shorts setting, and channel exception status. Avoid private account details.
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Expected and actual behavior
+      description: Include the publication label and debug overlay result, if available.
+    validations:
+      required: true
